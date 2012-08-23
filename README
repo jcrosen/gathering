@@ -1,5 +1,7 @@
+** PROJECT IN PROGRESS **
+
 This is a simple ruby application that allows a user to create a "Gathering" of a specific type (Wedding, Party, etc.), manage an invitation list and allow invited persons to confirm their attendance via some form of input.
 
-This application has also been a learning experience/experiment to decouple the application specific business logic from the implementation details according to the design paradigm set forth in Robert Martin's presentation "Architecture: The Lost Years".  Please see the doc/credits file for details on who specifically has contributed to the completion of this project.
+This application is also a learning experience/experiment to decouple the application specific business logic from the implementation details according to the design paradigm set forth in Robert Martin's presentation "Architecture: The Lost Years".  Please see the doc/credits file for details on who specifically has contributed toward the completion of this project.
 
 This software is released under the MIT License, please see the LICENSE file within the same directory.
