@@ -1,0 +1,4 @@
+Special thanks go to the following individuals without whose help I could not have completed this project
+
+* Robert C Martin (Uncle Bob) for his keynote presentation "Architecture: The Lost Years".  He provided an inspiration for how to build this application.
+* Piotr 'Qertoip' Włodarek for his initial "guru_watch" sample application that illustrated some of the concepts of the "Architecture: The Lost Years" presentation.  My application borrows heavily from the code and concepts he created.
