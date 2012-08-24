@@ -28,5 +28,5 @@ group :test do
   gem 'minitest', "~> 3.3.0", require: false
   gem 'minitest-reporters', "~> 0.10.0", require: false
   gem 'mocha', "~> 0.12.3", require: false
-#  gem 'minitest-colorize', "~> 0.0.4", require: false
+  gem 'minitest-colorize', git: "https://github.com/nohupbrasil/minitest-colorize.git"
 end

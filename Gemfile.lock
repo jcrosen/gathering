@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/nohupbrasil/minitest-colorize.git
+  revision: e9bfd39673ee9ab8f341f410c22850b97b12353a
+  specs:
+    minitest-colorize (0.0.4)
+      minitest (>= 2.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -56,6 +63,7 @@ DEPENDENCIES
   activesupport (~> 3.2.8)
   cucumber (~> 1.2.1)
   minitest (~> 3.3.0)
+  minitest-colorize!
   minitest-reporters (~> 0.10.0)
   mocha (~> 0.12.3)
   rake

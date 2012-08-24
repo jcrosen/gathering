@@ -7,8 +7,9 @@ require_relative('../app/application')
 
 require 'cucumber'
 
+require 'minitest/spec'
 require 'minitest/autorun'
-#require 'minitest-colorize'
+require 'minitest-colorize'
 require 'mocha'
 
 require 'application_watch/test_case'

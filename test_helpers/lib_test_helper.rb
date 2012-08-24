@@ -6,9 +6,6 @@ ENV['APP_ENV'] = 'test'
 #require_relative('../app/application')
 require_relative('../lib/all')
 
-#require 'cucumber'
 require 'minitest/autorun'
-#require 'minitest-colorize'
+require 'minitest-colorize'
 require 'mocha'
-
-#require 'factories/all'

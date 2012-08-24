@@ -22,25 +22,25 @@ end
 
 Rake::TestTask.new( 'test:app:entities' ) do |t|
   t.libs << ['app', 'lib', 'test_helpers']
-  t.test_files = FileList['test/app/entities/**/*_test.rb','test/app/entities/**/*_spec.rb']
-  t.verbose = false
+  t.test_files = FileList['test/app/entities/*_test.rb','test/app/entities/*_spec.rb']
+  t.verbose = true
 end
 
 Rake::TestTask.new( 'test:app:use_cases' ) do |t|
   t.libs << ['app', 'lib', 'test_helpers']
-  t.test_files = FileList['test/app/use_cases/**/*_test.rb', 'test/app/use_cases/**/*_spec.rb']
+  t.test_files = FileList['test/appuse_cases/*_test.rb', 'test/app/use_cases/*_spec.rb']
   t.verbose = false
 end
 
 Rake::TestTask.new( 'test:app:frontends' ) do |t|
   t.libs << ['app', 'lib', 'test_helpers']
-  t.test_files = FileList['test/app/frontends/**/*_test.rb', 'test/app/frontends/**/*_spec.rb']
+  t.test_files = FileList['test/app/frontends/*_test.rb', 'test/app/frontends/*_spec.rb']
   t.verbose = false
 end
 
 Rake::TestTask.new( 'test:app:backends' ) do |t|
   t.libs << ['app', 'lib', 'test_helpers']
-  t.test_files = FileList['test/app/backends/**/*_test.rb', 'test/app/backends/**/*_spec.rb']
+  t.test_files = FileList['test/app/backends/*_test.rb', 'test/app/backends/*_spec.rb']
   t.verbose = false
 end
 

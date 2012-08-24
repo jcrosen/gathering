@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 
-module GatheringFactory
+module EventFactory
 
   include Factory
 
@@ -9,12 +9,13 @@ module GatheringFactory
     random_desc = RandomString.generate(30).camelcase
 
     {
-        name: "#{random_name}",
-        description: "#{random_desc}",
-        type: "Wedding"
+        :name => "#{random_name}",
+        :description => "#{random_desc}",
+        :date_time => Time.new,
+        :gathering_id => 1
     }
   end
 
 end
 
-Entities::Gathering.extend(GatheringFactory)
+Entities::Event.extend(EventFactory)
