@@ -7,24 +7,36 @@ module RubyPersistenceAPI
     class Backend
 
       def [](entity_object_or_entity_class)
-        if entity_object_or_entity_class.is_a?(Class)
-          query(entity_object_or_entity_class)
-        else
-          gateway(entity_object_or_entity_class)
+        begin
+          if entity_object_or_entity_class.is_a?(Class)
+            query(entity_object_or_entity_class)
+          else
+            gateway(entity_object_or_entity_class)
+          end
+        rescue Exception => e
+          raise e
         end
       end
 
       private
 
       def query(entity_class)
-        gateway_class = deduce_gateway_class_from(entity_class)
-        gateway = gateway_class.new(self)
-        Query.new(gateway)
+        begin
+          gateway_class = deduce_gateway_class_from(entity_class)
+          gateway = gateway_class.new(self)
+          Query.new(gateway)
+        rescue Exception => e
+          raise e
+        end
       end
 
       def gateway(entity)
-        gateway_class = deduce_gateway_class_from(entity.class)
-        gateway_class.new(self, entity)
+        begin
+          gateway_class = deduce_gateway_class_from(entity.class)
+          gateway_class.new(self, entity)
+        rescue Exception => e
+          raise e
+        end
       end
 
       def deduce_gateway_from(entity_class)

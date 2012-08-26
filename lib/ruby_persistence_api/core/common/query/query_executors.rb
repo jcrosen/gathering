@@ -13,7 +13,11 @@ module RubyPersistenceAPI
     end
 
     def find(id)
-      gateway.find(id, self)
+      begin
+        gateway.find(id, self)
+      rescue Exception => e
+        raise e
+      end
     end
 
     def create(attributes = { })

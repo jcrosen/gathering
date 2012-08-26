@@ -14,7 +14,7 @@ class Application
     augment_load_path
     require_lib
     require_app
-    #init_backend
+    init_backend
   end
 
   def config

@@ -11,7 +11,5 @@ require 'minitest/spec'
 require 'minitest/autorun'
 require 'minitest-colorize'
 require 'mocha'
-
 require 'application_watch/test_case'
-
 require 'factories/all'

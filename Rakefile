@@ -29,7 +29,7 @@ end
 Rake::TestTask.new( 'test:app:use_cases' ) do |t|
   t.libs << ['app', 'lib', 'test_helpers']
   t.test_files = FileList['test/appuse_cases/*_test.rb', 'test/app/use_cases/*_spec.rb']
-  t.verbose = false
+  t.verbose = true
 end
 
 Rake::TestTask.new( 'test:app:frontends' ) do |t|
