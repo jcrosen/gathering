@@ -16,6 +16,9 @@ describe Event do
   it "is invalid without a date and time" do
     Event.new_valid(:date_time => nil).valid?.must_equal(false)
   end
+  it "is invalid without a location" do
+    Event.new_valid(:location => nil).valid?.must_equal(false)
+  end
   it "is invalid without a gathering" do
     Event.new_valid(:gathering_id => nil).valid?.must_equal(false)
   end

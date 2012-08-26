@@ -13,7 +13,8 @@ describe CreateEvent do
       :name => "Rehearsal Dinner",
       :description => "The rehearsal dinner will be provided at sdlkfjweokc.",
       :date_time => Time.new('6/1/2013 17:00'),
-      :gathering_id => gathering.id
+      :gathering_id => gathering.id,
+      :location => "100 Main St, Anywhere, US - Above the landing"
     }
   end
 
@@ -28,6 +29,7 @@ describe CreateEvent do
     event.description.must_equal(atts[:description])
     event.date_time.must_equal(atts[:date_time])
     event.gathering_id.must_equal(atts[:gathering_id])
+    event.location.must_equal(atts[:location])
   end
   
   it "returns errors if the create Event request is not valid" do

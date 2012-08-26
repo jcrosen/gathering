@@ -4,6 +4,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :name, :null => false
       t.text :description, :null => false
       t.datetime :date_time, :null => false
+      t.string :location, :null => false
       t.gathering_id :integer, :null => false
     end
   end
