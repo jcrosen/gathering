@@ -7,7 +7,11 @@ module ApplicationWatch
   end
 
   class MiniTest::Spec
-   
+  
+    def db
+      Application.instance.config.backend
+    end
+  
     def run( *args, &block )
       value = nil
    
