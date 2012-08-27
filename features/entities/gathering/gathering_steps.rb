@@ -23,12 +23,12 @@ When /^I create a valid gathering$/ do
 end
 
 When /^I create a valid gathering with a specified type$/ do
-  @gathering = Gathering.new_valid(:type => specified_gathering_type)
+  @gathering = Gathering.new_valid(:gathering_type => specified_gathering_type)
 end
 
 When /^I create a valid gathering without a specified type$/ do
   atts = Gathering.valid_attributes
-  atts.delete(:type)
+  atts.delete(:gathering_type)
   @gathering = Gathering.new(atts)
 end
 
@@ -37,9 +37,9 @@ Then /^the gathering is valid$/ do
 end
 
 Then /^the gathering type should be the default type$/ do
-  @gathering.type.must_equal(@gathering.attribute_defaults["type"])
+  @gathering.gathering_type.must_equal(@gathering.attribute_defaults["type"])
 end
 
 Then /^the gathering type should be the specified type$/ do
-  @gathering.type.must_equal(specified_gathering_type)
+  @gathering.gathering_type.must_equal(specified_gathering_type)
 end

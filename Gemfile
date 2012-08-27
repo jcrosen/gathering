@@ -20,6 +20,26 @@ end
 group :active_memory_backend do
 end
 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Frontends
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+group :web_rails_frontend do
+  gem 'unicorn', '4.3.1'
+  gem 'rails', '3.2.8' #, require: false
+  gem 'haml', '~> 3.1.7'
+  gem 'jquery-rails', '~> 2.1.1'
+end
+
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'therubyracer' # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+
+  gem 'bootstrap-sass'
+end
+
+
 #------------------------------------------------------------#
 #   Testing Tools
 #------------------------------------------------------------#

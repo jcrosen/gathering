@@ -2,7 +2,7 @@ class CreateGatherings < ActiveRecord::Migration
   def up
     create_table :gatherings do |t|
       t.string :name, :null => false
-      t.string :type, :null => false
+      t.string :gathering_type, :null => false
       t.text :description, :null => false
     end
   end

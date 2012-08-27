@@ -1,3 +1,4 @@
 .rvmrc
 db/*
 config/backends/*.yml
+app/backends/active_record/db/*

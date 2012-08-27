@@ -1,0 +1,22 @@
+
+.control-group{ class: ( vm.errors ? 'error' : '' ) }
+  %label.control-label{ for: 'gathering_name' }
+    Name
+  .controls
+    %input.span5{ type: 'text', id: 'gathering_name', name: 'gathering[name]', value: vm.gathering.name }
+    = errors(:name)
+
+.control-group
+  %label.control-label{ for: 'gathering_type' }
+    Type
+  .controls
+    %input.span5{ type: 'text', id: 'gathering_type', name: 'gathering[gathering_type]', value: vm.gathering.gathering_type }
+    = errors(:gathering_type)
+
+.control-group
+  %label.control-label{ for: 'gathering_description' }
+    Description
+  .controls
+    %textarea.span5{ id: 'gathering_description', name: 'gathering[description]' }
+      = vm.gathering.description
+    = errors(:description)

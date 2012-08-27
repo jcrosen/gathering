@@ -14,6 +14,6 @@ describe Gathering do
     Gathering.new_valid(:description => nil).valid?.must_equal(false)
   end
   it "is invalid without a type" do
-    Gathering.new_valid(:type => nil).valid?.must_equal(false)
+    Gathering.new_valid(:gathering_type => nil).valid?.must_equal(false)
   end
 end

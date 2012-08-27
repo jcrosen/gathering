@@ -22,7 +22,7 @@ describe UpdateEvent do
   
   it "returns errors if we attempt to update an Event with invalid attributes" do
     event = Event.create_valid!
-    new_atts = {:name => nil, :description => "New Description", :type => "New Type", :gathering_id => event.gathering_id, :location => "New Location"}
+    new_atts = {:name => nil, :description => "New Description", :date_time => Time.new("6/1/2014 14:40"), :gathering_id => event.gathering_id, :location => "New Location"}
     
     response = UpdateEvent.new(:id => event.id, :atts => new_atts).exec
     response.ok?.must_equal(false)
@@ -35,7 +35,7 @@ describe UpdateEvent do
   
   it "raises an exception if attempting to update an Event with a Gathering that does not exist" do
     event = Event.create_valid!
-    new_atts = {:name => nil, :description => "New Description", :type => "New Type", :gathering_id => -1, :location => "New Location"}
+    new_atts = {:name => nil, :description => "New Description", :date_time => Time.new("6/1/2014 14:40"), :gathering_id => -1, :location => "New Location"}
     lambda { UpdateEvent.new(:id => event.id, :atts => new_atts).exec }.must_raise(RubyPersistenceAPI::ObjectNotFound)
   end
 

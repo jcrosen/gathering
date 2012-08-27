@@ -8,18 +8,18 @@ describe UpdateGathering do
 
   it "successfully updates and persists an existing Gathering with valid attributes" do
     gathering = Gathering.create_valid!
-    new_atts = {:name => "New Name", :description => "New Description", :type => "New Type"}
+    new_atts = {:name => "New Name", :description => "New Description", :gathering_type => "New Type"}
     
     response = UpdateGathering.new(:id => gathering.id, :atts => new_atts).exec
     response.ok?.must_equal(true)
     response.gathering.name.must_equal(new_atts[:name])
     response.gathering.description.must_equal(new_atts[:description])
-    response.gathering.type.must_equal(new_atts[:type])
+    response.gathering.gathering_type.must_equal(new_atts[:gathering_type])
   end
   
   it "returns errors if we attempt to update a gathering with invalid attributes" do
     gathering = Gathering.create_valid!
-    new_atts = {:name => nil, :description => "New Description", :type => "New Type"}
+    new_atts = {:name => nil, :description => "New Description", :gathering_type => "New Type"}
     
     response = UpdateGathering.new(:id => gathering.id, :atts => new_atts).exec
     response.ok?.must_equal(false)

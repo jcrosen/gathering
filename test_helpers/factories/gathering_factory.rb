@@ -9,9 +9,9 @@ module GatheringFactory
     random_desc = RandomString.generate(30).camelcase
 
     {
-        name: "#{random_name}",
-        description: "#{random_desc}",
-        type: "Wedding"
+        :name => "#{random_name}",
+        :description => "#{random_desc}",
+        :gathering_type => "Wedding"
     }
   end
 

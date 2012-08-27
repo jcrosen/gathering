@@ -10,7 +10,7 @@ describe CreateGathering do
     {
       :name => "Monica_Culver_Jeremy_Crosen_Wedding",
       :description => "Monica Culver and Jeremy Crosen symbolically join their lives in the summer of 2013",
-      :type => "Wedding"
+      :gathering_type => "Wedding"
     }
   end
 
@@ -22,7 +22,7 @@ describe CreateGathering do
     gathering.id.wont_be_nil
     gathering.name.must_equal(valid_attributes[:name])
     gathering.description.must_equal(valid_attributes[:description])
-    gathering.type.must_equal(valid_attributes[:type])
+    gathering.gathering_type.must_equal(valid_attributes[:gathering_type])
     
   end
   

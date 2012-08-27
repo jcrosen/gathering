@@ -70,6 +70,7 @@ class Application
     case env
       when 'test' then
         init_active_memory_backend
+        #init_active_record_backend
       when 'development' then
         init_active_record_backend
       when 'production' then
