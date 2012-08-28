@@ -49,7 +49,7 @@ module UseCases
 
     SEED_GATHERINGS_EVENTS = [
       {
-        :name => "April_Showers_Fun",
+        :name => "April Showers and Fun",
         :description => "Come enjoy the showers in April with some fun in the garden",
         :gathering_type => "Party",
         :events => [
@@ -74,7 +74,7 @@ module UseCases
         ]
       },
       {
-        :name => "Jane_John_Doe_Wedding",
+        :name => "Jane and John Doe Wedding",
         :description => "Jane and John finally get married after having the same last names for what seems like forever!",
         :gathering_type => "Wedding",
         :events => [

@@ -25,18 +25,29 @@ end
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 group :web_rails_frontend do
-  gem 'unicorn', '4.3.1'
-  gem 'rails', '3.2.8' #, require: false
-  gem 'haml', '~> 3.1.7'
-  gem 'jquery-rails', '~> 2.1.1'
+  gem 'unicorn', '4.3.1' #, :require => false
+  gem 'rails', '3.2.8' #, :require => false
+  gem 'haml', '~> 3.1.7' #, :require => false
+  gem 'jquery-rails', '~> 2.1.1' #, :require => false
 end
 
-group :assets do
+group :web_sinatra_frontend do
+  gem 'sinatra', '~> 1.3.3', :require => false
+  gem 'thin', '~> 1.4.1', :require => false
+  gem 'haml', '~> 3.1.7', :require => false
+end
+
+group :assets_rails do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer' # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  gem 'bootstrap-sass', '~> 2.0.4.0'
+end
 
-  gem 'bootstrap-sass'
+group :assets_sinatra do
+  gem 'sass',   '~> 3.2.1'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'therubyracer' # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 end
 
 

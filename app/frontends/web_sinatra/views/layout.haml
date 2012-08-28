@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title
+      = @title || 'Gatherings'
+  
+    %link{ :rel => "stylesheet",  :href => "stylesheets/bootstrap.css" } 
+
+  %body
+    .container
+      .row
+        .span12
+          %h1= @title
+
+          = yield
+
