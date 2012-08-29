@@ -37,7 +37,7 @@ Then /^the gathering is valid$/ do
 end
 
 Then /^the gathering type should be the default type$/ do
-  @gathering.gathering_type.must_equal(@gathering.attribute_defaults["type"])
+  @gathering.gathering_type.must_equal(@gathering.attribute_defaults["gathering_type"])
 end
 
 Then /^the gathering type should be the specified type$/ do

@@ -31,6 +31,13 @@ describe CreateGathering do
     response.ok?.must_equal(false)
     response.errors.wont_be_nil
   end
+  
+  it "returns errors if creating Gathering with a duplicate name" do
+    gathering_orig = CreateGathering.new(:atts => valid_attributes).exec.gathering
+    response = CreateGathering.new(:atts => valid_attributes.merge(:name => gathering_orig.name)).exec
+    response.ok?.must_equal(false)
+    response.errors.wont_be_nil
+  end
 
 end
 

@@ -35,6 +35,7 @@ group :web_sinatra_frontend do
   gem 'sinatra', '~> 1.3.3', :require => false
   gem 'thin', '~> 1.4.1', :require => false
   gem 'haml', '~> 3.1.7', :require => false
+  #gem 'bureaucrat', '~> 0.10.2', :require => false
 end
 
 group :assets_rails do
