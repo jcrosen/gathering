@@ -22,4 +22,14 @@ describe Event do
   it "is invalid without a gathering" do
     Event.new_valid(:gathering_id => nil).valid?.must_equal(false)
   end
+  it "is invalid if there's a duplicate name for the same gathering" do
+    event_orig = Event.create_valid!
+    event_dup = Event.new_valid(:name => event_orig.name, :gathering_id => event_orig.gathering_id)
+    event_dup.valid?.must_equal(false)
+  end
+  it "is valid if there are duplicate names across multiple gatherings" do
+    event_orig = Event.create_valid!
+    event_dup = Event.new_valid(:name => event_orig.name, :gathering_id => (event_orig.gathering_id + 1))
+    event_dup.valid?.must_equal(true)
+  end
 end

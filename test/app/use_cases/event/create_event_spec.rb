@@ -38,8 +38,12 @@ describe CreateEvent do
     response.errors.wont_be_nil
   end
   
-  it "returns an exception if the Event has a Gathering id that does not exist" do
-    lambda { CreateEvent.new(:atts => valid_attributes.merge(:gathering_id => -1)).exec }.must_raise(RubyPersistenceAPI::ObjectNotFound)
+  it "returns an error if the Event has a Gathering id that does not exist" do
+    response = CreateEvent.new(:atts => valid_attributes.merge(:gathering_id => -1)).exec
+    response.ok?.must_equal(false)
+    response.errors.wont_be_nil
+    # originally was checking for an exception, but have decided to move exception handling into the use cases and return only errors
+    #lambda { CreateEvent.new(:atts => valid_attributes.merge(:gathering_id => -1)).exec }.must_raise(RubyPersistenceAPI::ObjectNotFound)
   end
 
 end

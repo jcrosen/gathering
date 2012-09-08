@@ -1,2 +1,2 @@
-require_relative 'gathering_gateway'
-require_relative 'event_gateway'
+require_siblings(__FILE__)
+

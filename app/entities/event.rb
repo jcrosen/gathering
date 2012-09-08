@@ -16,5 +16,6 @@ module Entities
     validates :gathering_id, :presence => true
     validates :date_time, :presence => true
     validates :location, :presence => true
+    validates :name, :uniqueness => {:scope => [:gathering_id]}
   end
 end

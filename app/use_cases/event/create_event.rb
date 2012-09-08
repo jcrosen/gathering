@@ -13,6 +13,8 @@ module UseCases
         else
           Response.new(:event => event, :errors => event.errors)
         end
+      rescue RubyPersistenceAPI::ObjectNotFound => e
+        Response.new(:event => nil, :errors => {:exception => e.message}) 
       rescue Exception => e
         raise e
       end
