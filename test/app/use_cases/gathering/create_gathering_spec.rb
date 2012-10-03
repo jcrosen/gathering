@@ -8,8 +8,8 @@ describe CreateGathering do
   
   def valid_attributes
     {
-      :name => "Monica_Culver_Jeremy_Crosen_Wedding",
-      :description => "Monica Culver and Jeremy Crosen symbolically join their lives in the summer of 2013",
+      :name => "Jane and John Doe Wedding",
+      :description => "Jane and John Doe symbolically join their lives in the summer of 2013",
       :gathering_type => "Wedding"
     }
   end
